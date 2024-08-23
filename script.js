@@ -6,17 +6,24 @@ const textoResultado = document.querySelector (".texto-resultado");
 
 const perguntas = [
     {
-        enunciado: "pergunta 1",
+        enunciado: "Qual é um dos principais fatores que contribui para a pobreza em muitos países?",
         alternativas: [
-            "Alternativa 1",
-            "Alternativa 2"
+            "Desigualdade econômica e falta de acesso a educação de qualidade.",
+            "A alta taxa de natalidade sem relação com a economia."
         ]
     },
     {
-        enunciado: "pergunta 2",
+        enunciado: "Qual é uma das consequências da discriminação de gênero?",
         alternativas: [
-            "Alternativa 1",
-            "Alternativa 2"
+            "A limitação de oportunidades econômicas e profissionais para mulheres.  ",
+            "O aumento na participação feminina em esportes."
+        ]
+    }
+    {
+        enunciado: "O que é a marginalização em um contexto social?",
+        alternativas: [
+            "O processo pelo qual grupos ou indivíduos são excluídos da participação plena na sociedade. ",
+            "A inclusão de todos os grupos sociais na tomada de decisões."
         ]
     }
 ];
