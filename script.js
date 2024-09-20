@@ -8,22 +8,46 @@ const perguntas = [
     {
         enunciado: "Qual é um dos principais fatores que contribui para a pobreza em muitos países?",
         alternativas: [
-            "Desigualdade econômica e falta de acesso a educação de qualidade.",
-            "A alta taxa de natalidade sem relação com a economia."
+            {
+                texto:"Desigualdade econômica e falta de acesso a educação de qualidade.",
+                afirmacao:
+            },
+            {
+                texto: "A alta taxa de natalidade sem relação com a economia.",
+                afirmacao:
+            }
+            
+           
         ]
     },
     {
         enunciado: "Qual é uma das consequências da discriminação de gênero?",
         alternativas: [
-            "A limitação de oportunidades econômicas e profissionais para mulheres.  ",
-            "O aumento na participação feminina em esportes."
+            {
+                texto: "A limitação de oportunidades econômicas e profissionais para mulheres.  ",
+                afirmacao:
+            },
+            {
+                texto: "O aumento na participação feminina em esportes.",
+                afirmacao:
+            }
+           
+           
         ]
     }
     {
         enunciado: "O que é a marginalização em um contexto social?",
         alternativas: [
-            "O processo pelo qual grupos ou indivíduos são excluídos da participação plena na sociedade. ",
-            "A inclusão de todos os grupos sociais na tomada de decisões."
+            {
+                texto:"O processo pelo qual grupos ou indivíduos são excluídos da participação plena na sociedade. ",
+                afirmacao:
+            },
+            {
+                texto:"A inclusão de todos os grupos sociais na tomada de decisões.",
+                afirmacao:
+            }
+            
+            
         ]
     }
 ];
@@ -36,11 +60,16 @@ function mostrapergunta() {
     mostraAlternativas();
 }
 
-function mostraAlternativas(){
-    for(const alternativa of perguntaAtual.alternativas){
-        const botaoAlternativas = document.createElement("button");
-        botaoAlternativas.textContent = alternativa;
-        caixaAlternativas.appendChild(botaoAlternativas)
+function mostraAlternativas() {
+    for (const alternativa of perguntaAtual.alternativas) {
+      const botaoAlternativas = document.createElement("button");
+      botaoAlternativas.textContent = alternativa.texto;
+      botaoAlternativas.addEventListener("click", function () {
+        atual++;
+        mostraPergunta();
+      });
+      caixaAlternativas.appendChild(botaoAlternativas);
     }
-}
+  }
+  
 mostrapergunta()
